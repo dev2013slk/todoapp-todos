@@ -33,9 +33,6 @@ public class TodoServiceImpl implements TodoService {
     public Todo saveTodo(Todo todo) {
         log.info("Inside TodoService.");
 
-        log.info("### KafkaProducer ");
-        this.kafkaTemplate.send(TOPIC, "##### A new TODO has been created : " + todo.getTodoName());
-
         return todoRepository.save(todo);
     }
 

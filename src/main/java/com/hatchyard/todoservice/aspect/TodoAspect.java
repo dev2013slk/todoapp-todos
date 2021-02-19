@@ -16,15 +16,15 @@ import org.springframework.stereotype.Component;
  * TodoCategoryServiceImpl
  * Created by Lasath Jayawardana
  */
-//@Aspect
-//@Component
+@Aspect
+@Component
 @Slf4j
 public class TodoAspect {
 
-//    private static final String TOPIC = "my_topic";
+    private static final String TOPIC = "my_topic";
 
-   /* @Autowired
-    private KafkaTemplate<String, String> kafkaTemplate;*/
+    @Autowired
+    private KafkaTemplate<String, String> kafkaTemplate;
 
     @Before(value = "execution(* com.hatchyard.todoservice.service.TodoService.*(..)) && args(todo)")
     public void beforeAdvice(JoinPoint joinPoint, Todo todo) {
@@ -38,8 +38,8 @@ public class TodoAspect {
         log.info("###### After method:" + joinPoint.getSignature());
 
         log.info("###### Successfully created Tdo with name - " + todo.getTodoName());
-//        log.info("### Producing Kafka Message ");
-//        this.kafkaTemplate.send(TOPIC, "##### A new TODO has been created : " + todo.getTodoName());
+        log.info("### Producing Kafka Message ");
+        this.kafkaTemplate.send(TOPIC, "##### A new TODO has been created : " + todo.getTodoName());
     }
 
 
