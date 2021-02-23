@@ -1,4 +1,4 @@
-package com.hatchyard.todoservice.service;
+package com.hatchyard.todoservice.todo.application.usecase;
 
 import com.hatchyard.todoservice.entity.Todo;
 import com.hatchyard.todoservice.repository.TodoRepository;
@@ -17,7 +17,7 @@ import java.util.List;
  */
 @Service
 @Slf4j
-public class TodoServiceImpl implements TodoService {
+public class AssembleTodoUseCaseImpl implements AssembleTodoUseCase {
 
     @Autowired
     TodoRepository todoRepository;

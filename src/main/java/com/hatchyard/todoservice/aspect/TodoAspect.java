@@ -43,7 +43,7 @@ public class TodoAspect {
     }
 
 
-   /* @Pointcut("execution(* com.hatchyard.todoservice.service.TodoService.getTodos(..))")
+   /* @Pointcut("execution(* com.hatchyard.todoservice.usecase.AssembleTodoUseCase.getTodos(..))")
     public void getTodos(){
         log.info("###### Listing Todo's - " + todo.getTodoName());
 

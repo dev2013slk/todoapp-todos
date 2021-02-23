@@ -1,4 +1,4 @@
-package com.hatchyard.todoservice.config;
+package com.hatchyard.todoservice.common.config;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

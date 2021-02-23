@@ -1,4 +1,4 @@
-package com.hatchyard.todoservice.service;
+package com.hatchyard.todoservice.todo.application.in;
 
 import com.hatchyard.todoservice.entity.Todo;
 

@@ -1,4 +1,4 @@
-package com.hatchyard.todoservice.service;
+package com.hatchyard.todoservice.todo.application.usecase;
 
 import com.hatchyard.todoservice.entity.Todo;
 
@@ -9,7 +9,7 @@ import java.util.List;
  * All rights reserved.
  * Created by lasath on 2/16/2021
  */
-public interface TodoService {
+public interface AssembleTodoUseCase {
     Todo saveTodo(Todo todo);
 
     List<Todo> getTodos();

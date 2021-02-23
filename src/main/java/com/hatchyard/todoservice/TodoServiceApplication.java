@@ -1,6 +1,6 @@
 package com.hatchyard.todoservice;
 
-import com.hatchyard.todoservice.config.YAMLConfig;
+import com.hatchyard.todoservice.common.config.YAMLConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

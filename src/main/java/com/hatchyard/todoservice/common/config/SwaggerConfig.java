@@ -1,4 +1,4 @@
-package com.hatchyard.todoservice.config;
+package com.hatchyard.todoservice.common.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
@@ -57,7 +57,7 @@ public class SwaggerConfig {
                 "Spring Boot REST API",
                 "Spring Boot REST API for Online Store",
                 "1.0",
-                "Terms of service",
+                "Terms of usecase",
                 new Contact("John Thompson", "https://springframework.guru/about/", "john@springfrmework.guru"),
                 "Apache License Version 2.0",
                 "https://www.apache.org/licenses/LICENSE-2.0");

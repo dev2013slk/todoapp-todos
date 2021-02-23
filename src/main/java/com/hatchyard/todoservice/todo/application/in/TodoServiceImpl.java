@@ -1,7 +1,8 @@
-package com.hatchyard.todoservice.service;
+package com.hatchyard.todoservice.todo.application.in;
 
 import com.hatchyard.todoservice.entity.Todo;
 import com.hatchyard.todoservice.repository.TodoRepository;
+import com.hatchyard.todoservice.service.TodoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
