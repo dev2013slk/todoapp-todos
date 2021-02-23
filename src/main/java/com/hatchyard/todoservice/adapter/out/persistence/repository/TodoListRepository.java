@@ -1,9 +1,9 @@
 package com.hatchyard.todoservice.adapter.out.persistence.repository;
 
-import com.hatchyard.todoservice.entity.TodoCategory;
+import com.hatchyard.todoservice.adapter.out.persistence.entity.TodoListEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TodoCategoryRepository extends JpaRepository<TodoCategory, Long> {
+public interface TodoListRepository extends JpaRepository<TodoListEntity, Long> {
 }
