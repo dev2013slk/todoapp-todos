@@ -1,7 +1,7 @@
 package com.hatchyard.todoservice.domain.usecase.todo.impl;
 
 import com.hatchyard.todoservice.adapter.out.persistence.repository.TodoRepository;
-import com.hatchyard.todoservice.domain.entity.Todo;
+import com.hatchyard.todoservice.domain.entity.TodoDomain;
 import com.hatchyard.todoservice.domain.port.TodoPort;
 import com.hatchyard.todoservice.domain.usecase.CreateUseCase;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
  * Copyright(c) 2021 DirectFN to present.
  */
 @Service
-public class CreateUseCaseImpl implements CreateUseCase<Todo> {
+public class TodoCreateUseCaseImpl implements CreateUseCase<TodoDomain> {
 
 
 
@@ -27,9 +27,9 @@ public class CreateUseCaseImpl implements CreateUseCase<Todo> {
 
 
     @Override
-    public Todo save(Todo todo) {
+    public TodoDomain save(TodoDomain todoDomain) {
 
 
-        return todoPort.createTodoPort(todo);
+        return todoPort.createTodoPort(todoDomain);
     }
 }

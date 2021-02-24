@@ -1,10 +1,6 @@
 package com.hatchyard.todoservice.domain.usecase;
 
 
-import com.hatchyard.todoservice.domain.entity.Todo;
-
-import java.util.List;
-
 /**
  * CreateUseCase
  * All rights reserved.

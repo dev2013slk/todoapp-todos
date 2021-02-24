@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 /**
- * Todo
+ * TodoDomain
  * All rights reserved.
  * Created by lasath on 2/16/2021
  */
@@ -16,15 +16,13 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Todo {
+public class TodoDomain {
 
-/*    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "auto_gen")
-    @SequenceGenerator(name = "auto_gen", sequenceName = "TODO_SEQ")*/
+
     private Long todoId;
 
     private String todoName;
 
-    private List<TodoList> todoCategories;
+    private List<TodoCategoryDomain> todoCategories;
 
 }

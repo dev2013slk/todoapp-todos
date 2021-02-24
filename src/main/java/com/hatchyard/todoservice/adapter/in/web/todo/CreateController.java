@@ -1,7 +1,7 @@
 package com.hatchyard.todoservice.adapter.in.web.todo;
 
-import com.hatchyard.todoservice.domain.entity.Todo;
-import com.hatchyard.todoservice.domain.usecase.todo.impl.CreateUseCaseImpl;
+import com.hatchyard.todoservice.domain.entity.TodoDomain;
+import com.hatchyard.todoservice.domain.usecase.todo.impl.TodoCreateUseCaseImpl;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,14 +22,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class CreateController {
 
     @Autowired
-    CreateUseCaseImpl createUseCase;
+    TodoCreateUseCaseImpl createUseCase;
 
 
     @Operation(summary = "Crate a new TODO")
     @PostMapping("/")
-    public Todo saveTodo(@RequestBody Todo todo) {
-        log.info("Inside TODOController " + todo);
-        return createUseCase.save(todo);
+    public TodoDomain saveTodo(@RequestBody TodoDomain todoDomain) {
+        log.info("Inside TODOController " + todoDomain);
+        return createUseCase.save(todoDomain);
     }
 
 }

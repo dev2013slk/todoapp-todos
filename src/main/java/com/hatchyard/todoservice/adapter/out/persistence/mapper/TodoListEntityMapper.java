@@ -1,9 +1,7 @@
 package com.hatchyard.todoservice.adapter.out.persistence.mapper;
 
-import com.hatchyard.todoservice.adapter.out.persistence.entity.TodoEntity;
-import com.hatchyard.todoservice.adapter.out.persistence.entity.TodoListEntity;
-import com.hatchyard.todoservice.domain.entity.Todo;
-import com.hatchyard.todoservice.domain.entity.TodoList;
+import com.hatchyard.todoservice.adapter.out.persistence.entity.TodoCategory;
+import com.hatchyard.todoservice.domain.entity.TodoCategoryDomain;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,21 +11,21 @@ import org.springframework.stereotype.Service;
  * Copyright(c) 2021 DirectFN to present.
  */
 @Service
-public class TodoListEntityMapper implements EntityMapper<TodoListEntity, TodoList> {
+public class TodoListEntityMapper implements EntityMapper<TodoCategory, TodoCategoryDomain> {
 
 
     @Override
-    public TodoListEntity toEntity(TodoList obj) {
-        return TodoListEntity.builder()
-                .listId(obj.getListId())
+    public TodoCategory toEntity(TodoCategoryDomain obj) {
+        return TodoCategory.builder()
+                .id(obj.getListId())
                 .listName(obj.getListName())
                 .build();
     }
 
     @Override
-    public TodoList toDomain(TodoListEntity entity) {
-        return TodoList.builder()
-                .listId(entity.getListId())
+    public TodoCategoryDomain toDomain(TodoCategory entity) {
+        return TodoCategoryDomain.builder()
+                .listId(entity.getId())
                 .listName(entity.getListName())
                 .build();
     }

@@ -1,13 +1,7 @@
 package com.hatchyard.todoservice.adapter.out.context;
 
-import com.hatchyard.todoservice.entity.Todo;
 import lombok.extern.slf4j.Slf4j;
-import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
 /**
@@ -19,31 +13,31 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class TodoAspectAdapter {
 
-    private static final String TOPIC = "my_topic";
+   /* private static final String TOPIC = "my_topic";
 
     @Autowired
     private KafkaTemplate<String, String> kafkaTemplate;
 
-    @Before(value = "execution(* com.hatchyard.todoservice.service.TodoService.*(..)) && args(todo)")
-    public void beforeAdvice(JoinPoint joinPoint, Todo todo) {
+    @Before(value = "execution(* com.hatchyard.todoservice.service.TodoService.*(..)) && args(todoDomain)")
+    public void beforeAdvice(JoinPoint joinPoint, TodoDomain todoDomain) {
         log.info("###### Before method:" + joinPoint.getSignature());
 
-        log.info("###### Creating Tdo with name - " + todo.getTodoName());
+        log.info("###### Creating Tdo with name - " + todoDomain.getTodoName());
 }
 
-    @After(value = "execution(* com.hatchyard.todoservice.service.TodoService.*(..)) && args(todo)")
-    public void afterAdvice(JoinPoint joinPoint, Todo todo) {
+    @After(value = "execution(* com.hatchyard.todoservice.service.TodoService.*(..)) && args(todoDomain)")
+    public void afterAdvice(JoinPoint joinPoint, TodoDomain todoDomain) {
         log.info("###### After method:" + joinPoint.getSignature());
 
-        log.info("###### Successfully created Tdo with name - " + todo.getTodoName());
+        log.info("###### Successfully created Tdo with name - " + todoDomain.getTodoName());
         log.info("### Producing Kafka Message ");
-        this.kafkaTemplate.send(TOPIC, "##### A new TODO has been created : " + todo.getTodoName());
-    }
+        this.kafkaTemplate.send(TOPIC, "##### A new TODO has been created : " + todoDomain.getTodoName());
+    }*/
 
 
    /* @Pointcut("execution(* com.hatchyard.todoservice.usecase.CreateUseCase.getTodos(..))")
     public void getTodos(){
-        log.info("###### Listing Todo's - " + todo.getTodoName());
+        log.info("###### Listing TodoDomain's - " + todoDomain.getTodoName());
 
     }*/
 }

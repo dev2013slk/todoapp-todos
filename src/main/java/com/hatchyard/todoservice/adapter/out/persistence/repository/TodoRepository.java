@@ -1,7 +1,7 @@
 package com.hatchyard.todoservice.adapter.out.persistence.repository;
 
 
-import com.hatchyard.todoservice.adapter.out.persistence.entity.TodoEntity;
+import com.hatchyard.todoservice.adapter.out.persistence.entity.Todo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -12,5 +12,5 @@ import org.springframework.stereotype.Repository;
  * Copyright (c) 2017 6willow.com to present.
  */
 @Repository
-public interface TodoRepository extends JpaRepository<TodoEntity, Long> {
+public interface TodoRepository extends JpaRepository<Todo, Long> {
 }

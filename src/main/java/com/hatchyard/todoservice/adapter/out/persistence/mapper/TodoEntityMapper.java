@@ -1,7 +1,7 @@
 package com.hatchyard.todoservice.adapter.out.persistence.mapper;
 
-import com.hatchyard.todoservice.adapter.out.persistence.entity.TodoEntity;
-import com.hatchyard.todoservice.domain.entity.Todo;
+import com.hatchyard.todoservice.adapter.out.persistence.entity.Todo;
+import com.hatchyard.todoservice.domain.entity.TodoDomain;
 import org.springframework.stereotype.Service;
 
 /**
@@ -11,23 +11,23 @@ import org.springframework.stereotype.Service;
  * Copyright(c) 2021 DirectFN to present.
  */
 @Service
-public class TodoEntityMapper implements EntityMapper<TodoEntity, Todo> {
+public class TodoEntityMapper implements EntityMapper<Todo, TodoDomain> {
 
 
     @Override
-    public TodoEntity toEntity(Todo todo) {
-        new TodoEntity();
-        return TodoEntity.builder()
-                .todoId(todo.getTodoId())
-                .todoName(todo.getTodoName())
+    public Todo toEntity(TodoDomain todoDomain) {
+        new Todo();
+        return Todo.builder()
+                .todoId(todoDomain.getTodoId())
+                .todoName(todoDomain.getTodoName())
                 .build();
     }
 
     @Override
-    public Todo toDomain(TodoEntity todoEntity) {
-        return Todo.builder()
-                .todoId(todoEntity.getTodoId())
-                .todoName(todoEntity.getTodoName())
+    public TodoDomain toDomain(Todo todo) {
+        return TodoDomain.builder()
+                .todoId(todo.getTodoId())
+                .todoName(todo.getTodoName())
                 .build();
     }
 }

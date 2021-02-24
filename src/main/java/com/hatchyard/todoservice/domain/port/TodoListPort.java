@@ -1,7 +1,6 @@
 package com.hatchyard.todoservice.domain.port;
 
-import com.hatchyard.todoservice.domain.entity.Todo;
-import com.hatchyard.todoservice.domain.entity.TodoList;
+import com.hatchyard.todoservice.domain.entity.TodoCategoryDomain;
 
 /**
  * TodoPort
@@ -10,5 +9,5 @@ import com.hatchyard.todoservice.domain.entity.TodoList;
  * Copyright(c) 2021 DirectFN to present.
  */
 public interface TodoListPort {
-    TodoList createTodoList(TodoList todoList);
+    TodoCategoryDomain createTodoList(TodoCategoryDomain todoCategoryDomain);
 }

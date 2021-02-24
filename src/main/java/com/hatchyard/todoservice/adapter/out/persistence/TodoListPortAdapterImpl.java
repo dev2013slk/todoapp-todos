@@ -1,15 +1,10 @@
 package com.hatchyard.todoservice.adapter.out.persistence;
 
-import com.hatchyard.todoservice.adapter.out.persistence.entity.TodoEntity;
-import com.hatchyard.todoservice.adapter.out.persistence.entity.TodoListEntity;
-import com.hatchyard.todoservice.adapter.out.persistence.mapper.TodoEntityMapper;
+import com.hatchyard.todoservice.adapter.out.persistence.entity.TodoCategory;
 import com.hatchyard.todoservice.adapter.out.persistence.mapper.TodoListEntityMapper;
 import com.hatchyard.todoservice.adapter.out.persistence.repository.TodoListRepository;
-import com.hatchyard.todoservice.adapter.out.persistence.repository.TodoRepository;
-import com.hatchyard.todoservice.domain.entity.Todo;
-import com.hatchyard.todoservice.domain.entity.TodoList;
+import com.hatchyard.todoservice.domain.entity.TodoCategoryDomain;
 import com.hatchyard.todoservice.domain.port.TodoListPort;
-import com.hatchyard.todoservice.domain.port.TodoPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,8 +24,8 @@ public class TodoListPortAdapterImpl implements TodoListPort {
     TodoListEntityMapper entityMapper;
 
     @Override
-    public TodoList createTodoList(TodoList obj) {
-        TodoListEntity entity  = entityMapper.toEntity(obj);
+    public TodoCategoryDomain createTodoList(TodoCategoryDomain obj) {
+        TodoCategory entity  = entityMapper.toEntity(obj);
         return entityMapper.toDomain(todoListRepository.save(entity));
     }
 }

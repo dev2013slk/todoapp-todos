@@ -1,6 +1,6 @@
 package com.hatchyard.todoservice.domain.port;
 
-import com.hatchyard.todoservice.domain.entity.Todo;
+import com.hatchyard.todoservice.domain.entity.TodoDomain;
 
 /**
  * TodoPort
@@ -9,5 +9,5 @@ import com.hatchyard.todoservice.domain.entity.Todo;
  * Copyright(c) 2021 DirectFN to present.
  */
 public interface TodoPort {
-    Todo createTodoPort(Todo todo);
+    TodoDomain createTodoPort(TodoDomain todoDomain);
 }

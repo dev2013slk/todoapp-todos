@@ -16,7 +16,7 @@ spring:
   # Database
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/ams-master?currentSchema=todo
+    url: jdbc:postgresql://localhost:5432/ams-master-db?currentSchema=todo
     username: postgres
     password: tiger@123
   jpa:
