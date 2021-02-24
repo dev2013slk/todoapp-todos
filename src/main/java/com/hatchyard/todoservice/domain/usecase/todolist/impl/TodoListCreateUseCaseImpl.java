@@ -4,6 +4,7 @@ import com.hatchyard.todoservice.adapter.out.persistence.repository.TodoReposito
 import com.hatchyard.todoservice.domain.entity.TodoCategoryDomain;
 import com.hatchyard.todoservice.domain.port.TodoListPort;
 import com.hatchyard.todoservice.domain.usecase.CreateUseCase;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Service;
  * Copyright(c) 2021 DirectFN to present.
  */
 @Service
+@Slf4j
 public class TodoListCreateUseCaseImpl implements CreateUseCase<TodoCategoryDomain> {
 
 
@@ -29,7 +31,7 @@ public class TodoListCreateUseCaseImpl implements CreateUseCase<TodoCategoryDoma
     @Override
     public TodoCategoryDomain save(TodoCategoryDomain todoCategoryDomain) {
 
-
+        log.info("##### TodoListCreateUseCaseImpl " + todoCategoryDomain);
         return todoListPort.createTodoList(todoCategoryDomain);
     }
 }

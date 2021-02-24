@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.hatchyard</groupId>
-    <artifactId>todo-service</artifactId>
+    <artifactId>todoDomain-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>todo-service</name>
+    <name>todoDomain-service</name>
     <description>Demo project forTodoApp</description>
     <properties>
         <java.version>1.8</java.version>

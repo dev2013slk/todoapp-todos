@@ -10,4 +10,5 @@ public interface CreateUseCase<T>  {
 
     T save(T t);
 
+
 }
